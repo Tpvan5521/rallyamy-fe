@@ -1,6 +1,7 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const LoginPage = ({ useNavigate, useLocation, useAuth }: { useNavigate: any, useLocation: any, useAuth: any }) => {
+const LoginPage = ({ useAuth }: { useAuth: any }) => {
   let navigate = useNavigate();
   let location: any = useLocation();
   let auth = useAuth();
@@ -21,7 +22,6 @@ const LoginPage = ({ useNavigate, useLocation, useAuth }: { useNavigate: any, us
   return (
     <div>
       <p>You must log in to view the page at {from}</p>
-
       <form onSubmit={handleSubmit}>
         <label>
           Username: <input name="username" type="text" />

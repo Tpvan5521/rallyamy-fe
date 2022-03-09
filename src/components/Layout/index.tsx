@@ -3,12 +3,12 @@ import {
   Link,
   Outlet,
 } from "react-router-dom";
-import { AuthStatus } from "routes/routes";
+import AuthStatus from "./AuthStatus";
 
-function PageLayout() {
+function PageLayout({ useAuth }: { useAuth: any }) {
   return (
     <div>
-      <AuthStatus />
+      <AuthStatus useAuth={useAuth}/>
       <ul>
         <li>
           <Link to="/">Home</Link>
