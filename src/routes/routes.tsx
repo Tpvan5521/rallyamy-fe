@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Suspense } from 'react';
+import React, { Suspense } from "react";
 import {
   Routes,
   Route,
@@ -7,7 +6,7 @@ import {
   Navigate,
   BrowserRouter
 } from "react-router-dom";
-import { AuthProvider, AuthContext } from "./AuthContext";
+import { AuthProvider, AuthContext } from "context/auth/AuthContext";
 
 import PageLayout from "components/Layout";
 import PageLoader from "components/Loader/PageLoader";

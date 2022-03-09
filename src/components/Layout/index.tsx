@@ -1,23 +1,14 @@
 import React from "react";
-import {
-  Link,
-  Outlet,
-} from "react-router-dom";
-import AuthStatus from "./AuthStatus";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
-function PageLayout({ useAuth }: { useAuth: any }) {
+const PageLayout = ({ useAuth }: { useAuth: any }) => {
   return (
-    <div>
-      <AuthStatus useAuth={useAuth}/>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
-      </ul>
-      <Outlet />
+    <div className="w-full flex flex-col h-screen justify-between">
+      <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
