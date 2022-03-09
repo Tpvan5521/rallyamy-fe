@@ -2,17 +2,17 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const LoginPage = ({ useAuth }: { useAuth: any }) => {
-  let navigate = useNavigate();
-  let location: any = useLocation();
-  let auth = useAuth();
+  const navigate = useNavigate();
+  const location: any = useLocation();
+  const auth = useAuth();
 
-  let from: string = location.state.from.pathname || "/";
+  const from: string = location.state.from.pathname || "/";
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    let formData = new FormData(event.currentTarget);
-    let username = formData.get("username") as string;
+    const formData = new FormData(event.currentTarget);
+    const username = formData.get("username") as string;
 
     auth.signin(username, () => {
       navigate(from, { replace: true });
@@ -30,6 +30,6 @@ const LoginPage = ({ useAuth }: { useAuth: any }) => {
       </form>
     </div>
   );
-}
+};
 
-export default LoginPage
+export default LoginPage;

@@ -1,18 +1,12 @@
 import React, { Suspense } from "react";
-import {
-  Routes,
-  Route,
-  useLocation,
-  Navigate,
-  BrowserRouter
-} from "react-router-dom";
+import { Routes, Route, useLocation, Navigate, BrowserRouter } from "react-router-dom";
 import { AuthProvider, AuthContext } from "context/auth/AuthContext";
 
 import PageLayout from "components/Layout";
 import PageLoader from "components/Loader/PageLoader";
-const HomePage = React.lazy(() => import("pages/Home"))
-const ProfilePage = React.lazy(() => import("pages/Profile"))
-const LoginPage = React.lazy(() => import("pages/Login"))
+const HomePage = React.lazy(() => import("pages/Home"));
+const ProfilePage = React.lazy(() => import("pages/Profile"));
+const LoginPage = React.lazy(() => import("pages/Login"));
 
 export default function App() {
   return (
@@ -44,8 +38,8 @@ function useAuth() {
 }
 
 function RequireAuth({ children }: { children: JSX.Element }) {
-  let auth = useAuth();
-  let location = useLocation();
+  const auth = useAuth();
+  const location = useLocation();
 
   if (!auth.user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
