@@ -6,5 +6,7 @@
   "useTabs": false,
   "arrowParens": "avoid",
   "trailingComma": "all",
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "avoidEscape": true,
+  "allowTemplateLiterals": true
 }

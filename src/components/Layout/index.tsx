@@ -11,6 +11,6 @@ const PageLayout = ({ useAuth }: { useAuth: any }) => {
       <Footer />
     </div>
   );
-}
+};
 
 export default PageLayout;

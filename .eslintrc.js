@@ -48,6 +48,6 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-var-requires": "off",
     "quotes": "off",
-    "semi": "off"
+    "semi": "off",
   },
 }
