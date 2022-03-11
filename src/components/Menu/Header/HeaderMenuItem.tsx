@@ -5,6 +5,7 @@ import styled from "styled-components";
 const StyledItem = styled.li`
   color: #bdbdbd;
   margin: 0 60px;
+  font-family: "Ubuntu";
 `;
 
 const HeaderMenuItem = ({ path, content }: { path: string; content: string }) => {
