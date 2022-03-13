@@ -14,14 +14,17 @@ const StyledButton = styled.button`
   background-color: #272abf;
   border: none;
   color: #fff;
-  padding: 0.5rem 1.5rem;
   font-weight: 600;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-const PrimaryButton = ({ content }: { content: string }) => {
+const PrimaryButton = ({ content, width }: { content: string; width?: string }) => {
   return (
     <StyledWrapper>
-      <StyledButton>{content}</StyledButton>
+      <StyledButton style={{ width: width ? width : "168px" }}>{content}</StyledButton>
     </StyledWrapper>
   );
 };
